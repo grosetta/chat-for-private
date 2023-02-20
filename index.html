@@ -4,7 +4,7 @@
 <div id="app" style="display: flex;flex-flow: column;margin: 20 ">
     <div style="display: flex;justify-content: center;align-items: center;margin: 20">
         <textarea type="text" v-model="info" cols="40" rows="3" style="margin:15"></textarea>
-        <button v-on:click="ask()">·¢ËÍ</button>
+        <button v-on:click="ask()">å‘é€</button>
     </div>
     <div style="display: flex;justify-content: center;align-items: center;"><textarea name="res" id="res" cols="100"
             rows="20">{{res}}</textarea></div>
@@ -14,14 +14,14 @@
     createApp({
         data() {
             return {
-                info: 'ÔÚÕâÀïÊäÈëÄãÏëÎÊµÄÎÊÌâ£¨¸öÈËÕËºÅ£¬ÇëÎğÆµ·±ÇëÇó£©',
+                info: 'åœ¨è¿™é‡Œè¾“å…¥ä½ æƒ³é—®çš„é—®é¢˜ï¼ˆä¸ªäººè´¦å·ï¼Œè¯·å‹¿é¢‘ç¹è¯·æ±‚ï¼‰',
                 res: '',
                 api: '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'
             }
         },
         methods: {
             ask() {
-                this.res = 'ÇëÇóÖĞ¡£¡£¡£¡£¡£¡£'
+                this.res = 'è¯·æ±‚ä¸­ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚'
                 axios.post('https://api.openai.com/v1/completions', {
                     prompt: this.info, max_tokens: 2048, model: "text-davinci-003"
                 }, {
